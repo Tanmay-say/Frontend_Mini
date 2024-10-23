@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Curved Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #6ba8fd71; /* Transparent background */
+            /* background-color: rgba(110, 107, 107, 0.56); */
+            width: 100%; /* 100% of the screen width */
+            margin: 20px auto; /* Centering the navbar horizontally */
+            /* border-radius: 50px; Curved edges */
+            position: fixed;
+            top: 10px; /* Adjust from the top */
+            left: 50%; /* Start from center */
+            transform: translateX(-50%); /* Center the navbar */
+            z-index: 1000; /* Ensure it stays on top */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: background-color 0.3s ease;
+            border-bottom: 3px groove #000; /* Add a black line below the navbar */
+        }
+
+        .navbar .brand {
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar:hover {
+            background-color: #bcd4f382; /* New background color when hovering over the navbar */
+            opacity: 0.8;
+        }
+
+        .navbar ul li a:hover {
+            color: #2063f3f6; /* Accent color */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 100px 0 20px; /* Adjust margin to prevent overlap with navbar */
+            color: #2063f3f6; /* Main accent color */
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        h5 {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border-left: 5px solid #2063f3f6; /* Accent color */
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+
+            .navbar {
+                width: 90%; /* Adjust for smaller screens */
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="brand">SignSnap</div>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="https://github.com/Bug-Bounty-Buddies/Sign_Snap" target="_blank">GitHub</a></li>
+            <li><a href="about.html">How It Works</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+
+    <h1>How It Works?</h1>
+    <p>
+        SnapSign is an advanced traffic sign recognition system designed for real-time detection and classification of road signs while driving, providing auditory feedback to the driver.
+        The system leverages object detection techniques to identify traffic signs within video frames captured by OpenCV. 
+        Once detected, the signs are classified using a Convolutional Neural Network (CNN) into predefined categories.
+        The classified output, which is in the form of text, is then synthesized into speech using the pyttsx3 text-to-speech engine. 
+        This real-time auditory feedback enhances driver awareness and promotes overall road safety.
+    </p>
+
+    <h2>Steps to Use:</h2>
+    <h5>1. Click on the open camera button. The camera gets open.</h5>
+    <h5>2. Bring any traffic sign image in front of the camera.</h5>
+    <h5>3. The model recognizes the traffic sign and provides the text output on the screen along with an audio output.</h5>
+
+</body>
+</html>
