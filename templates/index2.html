@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignSnap - Traffic Sign Recognition</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/busy-crowded-traffic-jam-road_53876-123104.jpg?t=st=1729617751~exp=1729621351~hmac=c744a5e5610c25bd40a83b6a422c05279f97ca3f826733e2b25aa2fea16940b0&w=996');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            filter: brightness(1.2);
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Curved Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgb(255, 255, 255); /* Transparent background */
+            /* background-color: rgba(231, 207, 207, 0.784); */
+            width: 100%; /* 80% of the screen width */
+            margin: 20px auto; /* Centering the navbar horizontally */
+            /* border-radius: 50px; Curved edges */
+            position: fixed;
+            top: 10px; /* Adjust from the top */
+            left: 50%; /* Start from center */
+            transform: translateX(-50%); /* Center the navbar */
+            z-index: 1000; /* Ensure it stays on top */
+            transition: background-color 0.3s ease;
+            opacity: 0.8;
+            border-bottom: 4px groove #000; /* Add a black line below the navbar */
+        }
+
+        .navbar .brand {
+            font-size: 40px;
+            font-weight: bold;
+            color: black; /* Ensure better contrast */
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar:hover {
+            background-color: #e9ecf071; /* New background color when hovering over the navbar */
+            opacity: 0.8;
+        }
+
+        .navbar ul li a:hover {
+            color: #30b3f4;
+        }
+
+        /* Center Content Styling */
+        .content {
+            text-align: center;
+            margin-top: 150px; /* Adjust space to avoid overlap with navbar */
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #2063f3f6 ;
+            color: black;
+            padding: 15px 30px;
+            font-size: 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #7fb5faf6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .content h1 {
+                font-size: 36px;
+            }
+
+            .content p {
+                font-size: 18px;
+            }
+
+            .button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+
+            .navbar {
+                width: 90%; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="brand">SignSnap</div>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="https://github.com/Bug-Bounty-Buddies/Sign_Snap" target="_blank">GitHub</a></li>
+            <li><a href="about.html">How It Works</a></li>
+        </ul>
+    </div>
+ <br>
+ <br>
+    <!-- Center Content -->
+    <div class="content">
+        <!-- <h1>SignSnap </h1>  -->
+        <br>
+        <br>
+        <br>
+        <!-- <br> -->
+        <h1>Traffic Sign Recognition</h1>
+        <br>
+        <br>
+        <br>
+        <h2>Click here to open camera</h2>
+        <br>
+        <button class="button" onclick="openCamera()">📸</button>
+    </div>
+
+    <script>
+        function openCamera() {
+            alert("Camera feed would open here.");
+        }
+    </script>
+
+</body>
+</html>
