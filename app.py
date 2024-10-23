@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+ main
     return render_template("index2.html")
 
 @app.route("/about.html")
@@ -17,3 +18,9 @@ def index2():
 
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
+
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+ main
