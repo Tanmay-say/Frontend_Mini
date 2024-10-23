@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
- main
-    return render_template("index2.html")
+    return render_template("index2.html")  # Remove the stray 'main'
 
 @app.route("/about.html")
 def about():
@@ -15,12 +14,5 @@ def about():
 def index2():
     return render_template("index2.html")
 
-
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
-
-    return render_template("index.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
- main
+    app.run(debug=True, port=8000)  # Only one call to app.run is needed
